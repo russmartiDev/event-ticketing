@@ -1,6 +1,14 @@
+import Link from 'next/link'
 export default function EventDetails() {
     return (
+      
         <div className="w-[70%] mx-auto items-center mt-10">
+          <Link href="/">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-8 h-8 cursor-pointer">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M6.75 15.75 3 12m0 0 3.75-3.75M3 12h18" />
+              </svg>
+          </Link>
+                
           <div className="bg-slate-200 w-full h-[30vw] mx-auto"></div>
           <div className="px-20 py-10">
             <h1 className="text-center text-5xl font-bold">Event Title</h1>
@@ -12,20 +20,20 @@ export default function EventDetails() {
 
             <div className="mt-5 flex gap-5">
               <div className="flex items-center border-2 border-indigo-500 w-fit py-1 px-2 rounded-lg">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-7 h-7 hover:text-indigo-500 cursor-pointer">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14" />
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-7 h-7 hover:text-indigo-500 cursor-pointer">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M5 12h14" />
                 </svg>
                 <span className="mx-3 font-black text-xl">1</span>
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-7 h-7 hover:text-indigo-500 cursor-pointer">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-7 h-7 hover:text-indigo-500 cursor-pointer">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
                 </svg>
               </div>
-              <div className="flex text-xl items-center font-semibold bg-indigo-500 w-fit p-2 rounded-lg text-white cursor-pointer hover:bg-indigo-900">
+              <Link href="checkout" className="flex text-xl items-center font-semibold bg-indigo-500 w-fit p-2 rounded-lg text-white cursor-pointer hover:bg-indigo-900">
                 Checkout Ticket
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 ">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3" />
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-6 h-6 ">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3" />
                 </svg>
-              </div>
+              </Link>
             </div>
           </div>
 

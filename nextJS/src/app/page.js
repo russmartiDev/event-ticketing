@@ -1,6 +1,7 @@
 import Selection from "./components/filterSelection";
 import Search from "./components/search";
 import Event from "./components/event";
+
 export default function Home() {
   const renderedItems = [];
   
@@ -28,7 +29,7 @@ export default function Home() {
           <Search/>
         </div>
       </div>
-      <div className="flex flex-wrap w-full gap-10 justify-center">
+      <div className="flex flex-wrap w-full gap-10 justify-center pb-10">
         {renderedItems}
       </div>
 
