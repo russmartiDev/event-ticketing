@@ -16,17 +16,11 @@ namespace Events.Controllers
             _eventsService = eventsService;
         }
 
-        [HttpGet]
-        public IActionResult Get()
-        {
-            var data = _eventsService.GetData();
-            return Ok(data);
-        }
 
-        [HttpGet("events")]
-        public IActionResult GetEvents()
+        [HttpGet("events/{eventType}")]
+        public IActionResult GetEvents(string eventType = null)
         {
-            List<EventsModel> events = _eventsService.GetData();
+            List<EventsModel> events = _eventsService.GetData(eventType);
             return Ok(events);
         }
 

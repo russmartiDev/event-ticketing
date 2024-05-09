@@ -16,14 +16,19 @@ namespace Events.Services
                 ?? throw new ArgumentNullException(nameof(configuration), "Connection string must be provided.");
         }
 
-        public List<EventsModel> GetData()
+        public List<EventsModel> GetData(string eventType)
         {
             List<EventsModel> eventsList = new List<EventsModel>();
 
             using (SqlConnection connection = new SqlConnection(_connectionString))
             {
                 string query = "SELECT * FROM Events";
-
+                if(eventType == "upcoming") {
+                    query += " WHERE Date > getutcdate();";
+                }
+                else {
+                    query += " WHERE Date < getutcdate();";
+                }
                 using (SqlCommand command = new SqlCommand(query, connection))
                 {
                     connection.Open();
