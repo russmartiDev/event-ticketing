@@ -17,10 +17,10 @@ namespace Events.Controllers
         }
 
 
-        [HttpGet("events/{eventType}")]
-        public IActionResult GetEvents(string eventType = null)
+        [HttpGet("events/{eventType}/{search?}")]
+        public IActionResult GetEvents(string eventType = null, string search = null)
         {
-            List<EventsModel> events = _eventsService.GetData(eventType);
+            List<EventsModel> events = _eventsService.GetData(eventType, search);
             return Ok(events);
         }
 
